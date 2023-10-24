@@ -14,7 +14,7 @@ function renderDefinitions(definitions) {
         }
         html += `        
             <li>
-                ${def.definition} ${example}
+                <p>${def.definition} ${example}</p>
             </li>        
         `
     }
@@ -32,14 +32,16 @@ function renderSynonyms(synonymList) {
 
 function renderMeaning(meaning) {
     let html = `
-        <p>${meaning.partOfSpeech}</p>
-        <ol>${renderDefinitions(meaning.definitions)}</ol>        
+        <div class="card">
+            <h3>${meaning.partOfSpeech}</h3>
+            <ol class="def-list">${renderDefinitions(meaning.definitions)}</ol>        
+        </div>
     `;
 
     if (Array.isArray(meaning.synonyms) && meaning.synonyms.length > 0) {
         // ha az első állítás igaz, akkor a másodikat is kiértékeljük
         html += `
-            <p>Synonims: ${renderSynonyms(meaning.synonyms)}</p>
+            <p class="card">Synonims: ${renderSynonyms(meaning.synonyms)}</p>
         `
     }
 
@@ -51,7 +53,7 @@ function renderWord(word) {
     if (typeof word.phonetic === 'string') {
         phonetic = word.phonetic;
     }
-    let html = `<h2>${word.word} ${phonetic}</h2>`; // wordDefinitions[0]-ban vannak
+    let html = `<h2 class="card">${word.word} ${phonetic}</h2>`; // wordDefinitions[0]-ban vannak
     for (let meaning of word.meanings) {
         html += renderMeaning(meaning); // másik függvényben megoldjuk
     }
@@ -64,10 +66,10 @@ function renderResponse(wordList) {
     // validálás, sikertelen keresésnél nem kapunk array-t, hanem csak egy object-et.
     if (Array.isArray(wordList) && wordList.length > 0) {
         for (let word of wordList) {
-            html += renderWord(word);
+            html += `<div class="word-list-div">${renderWord(word)}</div>`;
         }
     } else {
-        $errorSection.innerHTML = `<p>A keresett szó nem található!</p>`;
+        $errorSection.innerHTML = `<p>Sorry, we couldn't find the word!</p>`;
     }
 
     $container.innerHTML = html;

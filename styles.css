@@ -1,3 +1,196 @@
+/* ------------- Colors --------------------------------------*/
+:root {
+  --main-red: #ef476f;
+  --main-yellow: #ffd166;
+  --main-green: #06d6a0;
+  --main-blue: #118ab2;
+  --main-grey: #073b4c;
+  --main-white: ghostwhite;
+  --light-grey: #55595c;
+  --very-light-grey: #ced4da;
+  --very-light-grey-2: #f7f7f9;
+  --light-grey-2: #c6c6c6;
+}
+
+/* -------------- Reset --------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* html, */
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--very-light-grey);
+}
+
+main {
+  min-height: 90.5vh;
+}
+
+h1 {
+  margin-top: 2rem;
+  font-size: 5.6rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3.3rem;
+}
+
+h3 {
+  font-size: 2.6rem;
+}
+
+p,
+a {
+  font-size: 2rem;
+}
+
+.section-search {
+  margin: 0 1.5rem 4rem;
+}
+
+.search-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.word-form {
+  background-color: var(--main-yellow);
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.6rem 1.6rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.word-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  color: var(--light-grey);
+  font-weight: bold;
+  margin: 0.2rem 0 0.8rem;
+}
+
+.form-input {
+  padding: 1.2rem 1.2rem;
+  font-size: 1.6rem;
+  color: var(--light-grey);
+  font-weight: 400;
+  outline: none;
+  border: 0 solid var(--very-light-grey);
+  background-color: var(--very-light-grey-2);
+  transition: border-color 0.15s, ease-in-out 0.15s, box-shadow 0.15s;
+}
+
+.form-input:focus {
+  outline: 0.4rem solid var(--light-grey-2);
+}
+
+.btn {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  /* text-transform: uppercase; */
+  padding: 0.5rem 1.2rem;
+  margin: 0.4rem;
+  font-weight: bold;
+  border-style: solid;
+  text-align: center;
+  transition: transform 100ms;
+}
+
+.btn-primary {
+  background-color: var(--main-grey);
+  color: var(--main-white);
+  border-color: var(--main-grey);
+}
+
+.btn-primary:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  outline: 2px solid var(--main-grey);
+  border-color: var(--main-grey);
+}
+
 .error {
-  color: crimson;
+  margin: 0 auto;
+  max-width: 80rem;
+  background-color: var(--main-yellow);
+  color: var(--main-red);
+  font-weight: 700;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.error p {
+  padding: 1.6rem;
+}
+
+.word-description {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.word-list-div {
+  margin-bottom: 4rem;
+  border: 5px solid var(--main-blue);
+}
+
+.word-list-div :last-child {
+  margin-bottom: 0;
+}
+
+.card {
+  margin-bottom: 2rem;
+  padding: 1.6rem;
+  background-color: var(--main-yellow);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.def-list {
+  margin: 1rem 2rem;
+}
+
+.def-list li::marker {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--main-yellow);
+  padding: 1rem;
+  font-weight: bold;
+  text-align: end;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--main-grey);
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.bi-github {
+  margin: 1rem;
+}
+
+.nav-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 0.5rem;
+  font-size: 3rem;
+  background-color: var(--main-grey);
+  color: var(--main-white);
 }
