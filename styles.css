@@ -35,9 +35,13 @@ main {
 }
 
 h1 {
+  display: inline-block;
   margin-top: 2rem;
+  padding: 1.6rem;
   font-size: 5.6rem;
   text-align: center;
+  background-color: var(--main-yellow);
+  border: 10px solid var(--main-blue);
 }
 
 h2 {
@@ -67,6 +71,7 @@ a {
   max-width: 80rem;
   margin: 0 auto;
   padding: 1.6rem 1.6rem;
+  border: 10px solid var(--main-blue);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -141,7 +146,9 @@ a {
 
 .word-list-div {
   margin-bottom: 4rem;
-  border: 5px solid var(--main-blue);
+  border: 10px solid var(--main-blue);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .word-list-div :last-child {
