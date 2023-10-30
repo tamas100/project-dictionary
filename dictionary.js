@@ -104,17 +104,15 @@ function formSubmitted(event) {
     const word = $searchInput.value.trim(); // Létrehozzuk a változót, ami a food értékét tartalmazza, 
     // a trim()-mel kiegészítve, hogy a szóközök ne jelentsenek problémát.
     $searchInput.value = '';          // törli a keresőmezőt a keresés után
-    $container.innerHTML = '';       // Ennek a tartalmát minden kereséskor törölni kell! $errorField.innerHTML = ''
+    $container.innerHTML = '';       // Ennek a tartalmát minden kereséskor törölni kell!
 
     if (word.length > 0) {         // Validáció
-        $errorSection.innerHTML = ''; // Ennek a tartalmát minden kereséskor törölni kell! $errorField.innerHTML = ''
-
+        $errorSection.innerHTML = ''; // Ennek a tartalmát minden kereséskor törölni kell!
         fetchWord(word)
     } else {
         $errorSection.innerHTML =
             'Sikertelen keresés!'
     }
-    console.log(word);
 }
 
 function wordNavigation(event) {
@@ -125,4 +123,4 @@ function wordNavigation(event) {
 }
 
 $form.addEventListener("submit", formSubmitted);
-$container.addEventListener("click", wordNavigation);
+$container.addEventListener("click", wordNavigation); // kattinthatóak a szinonímák
