@@ -111,7 +111,7 @@ function formSubmitted(event) {
         fetchWord(word)
     } else {
         $errorSection.innerHTML =
-            'Sikertelen keresés!'
+            '<p>Failed search!</p>'
     }
 }
 

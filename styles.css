@@ -31,13 +31,7 @@ main {
 }
 
 h1 {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 1.6rem;
   font-size: 5.6rem;
-  text-align: center;
-  background-color: var(--main-yellow);
-  border: 10px solid var(--main-blue);
 }
 
 h2 {
@@ -53,6 +47,15 @@ a {
   font-size: 2rem;
 }
 
+#h1 {
+  max-width: 80rem;
+  margin: 2rem auto;
+  padding: 1.6rem;
+  text-align: center;
+  background-color: var(--main-yellow);
+  border: 10px solid var(--main-blue);
+}
+
 .section-search {
   margin: 0 1.5rem 4rem;
 }
@@ -62,12 +65,13 @@ a {
   margin-bottom: 4rem;
 }
 
-.word-form {
+.word-form,
+footer {
   background-color: var(--main-yellow);
+  border: 10px solid var(--main-blue);
   max-width: 80rem;
   margin: 0 auto;
   padding: 1.6rem 1.6rem;
-  border: 10px solid var(--main-blue);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -137,6 +141,7 @@ a {
 
 .error p {
   padding: 1.6rem;
+  border: 10px solid var(--main-blue);
 }
 
 .word-description {
@@ -145,7 +150,7 @@ a {
 }
 
 .word-list-div {
-  margin: 0 1.5rem 4rem;
+  margin-bottom: 4rem;
   border: 10px solid var(--main-blue);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -175,18 +180,10 @@ a {
 footer {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
-  background-color: var(--main-yellow);
-  padding: 1rem;
   font-weight: bold;
   text-align: end;
-}
-
-footer a {
-  text-decoration: none;
-  color: var(--main-grey);
-  font-weight: 700;
-  font-size: 3rem;
 }
 
 .bi-github {
