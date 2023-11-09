@@ -21,6 +21,7 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
+html,
 body {
   scroll-behavior: smooth;
   background-color: var(--very-light-grey);
